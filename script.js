@@ -18,13 +18,13 @@ const professions = ['Programistka', 'Programista', 'Front-End Developer'];
 
 function changeElement() {
   activeElement++;
-
+  if (activeElement == colorImages.length) {
+    activeElement = 0; //przypisanie wartości z tablicy od 0 jak będzie na końcu to od  -1 
+  }
   colorImgHtml.src = colorImages[activeElement];
   grayImgHtml.src = grayImages[activeElement];
   h1Html.textContent = names[activeElement];
   h2Html.textContent = professions[activeElement];
-  if (activeElement == 2) {
-    activeElement = -1; //przypisanie wartości z tablicy nie od 0 tylko -1 jeśli jest na końcu
-  }
+
 }
 setInterval(changeElement, 5000);
