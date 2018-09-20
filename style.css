@@ -10,6 +10,7 @@
 
 html {
   font-family: var(--oswald);
+  font-size: 10px;
 }
 
 .team {
@@ -17,4 +18,57 @@ html {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: #eee;
+}
+
+.team img.color {
+  position: absolute;
+  bottom: 0%;
+  right: -10%;
+  height: 35%;
+  z-index: 1;
+
+  animation: color 5s infinite linear both;
+}
+
+.team img.gray {
+  position: absolute;
+  bottom: 0%;
+  left: -60%;
+  opacity: .2;
+  height: 100%;
+  animation: gray 5s infinite linear both;
+}
+
+.member {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.team h1 {
+  font-size: 4rem;
+}
+
+.team h2 {
+  font-size: 2.2rem;
+}
+
+@keyframes color {
+  0% {
+    right: -10%;
+  }
+
+  100% {
+    right: 10%;
+  }
+}
+
+@keyframes gray {
+  100% {
+    height: 130%;
+    left: -80%;
+  }
 }
